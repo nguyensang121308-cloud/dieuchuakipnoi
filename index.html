@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#b9d9f7">
+<meta name="color-scheme" content="light">
+<title>Bưu thiếp và tháp thư</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&family=Dancing+Script:wght@600;700&family=Lora:wght@500;700&family=Pacifico&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="san" id="san">
+
+  <!-- Hoa và tim rơi (được tạo bằng JS) -->
+  <div class="hat-lop" id="hatLop" aria-hidden="true"></div>
+
+  <!-- ===== BƯU THIẾP 4x6 INCH: bấm vào để nổ ra tháp thư ===== -->
+  <div class="nho">
+    <div class="nghieng" id="nghieng">
+      <div class="the" id="the" role="button" tabindex="0" aria-label="Bấm vào bưu thiếp để mở các bức thư">
+        <!-- >>> ĐỔI ẢNH Ở ĐÂY: thay images/bia.jpg bằng ảnh của bạn <<< -->
+        <div class="anh" id="anhBia" style="background-image:url('images/bia.jpg'),linear-gradient(135deg,#2a78d4,#7cc0f5)">
+          <div class="loi"><span id="bcTieude">Gửi từ trang viết của tôi</span><small id="bcPhu">Chuyện đi, chuyện ăn, chuyện nghề</small></div>
+        </div>
+        <div class="tem"><span id="bcTem">THƯ<br>5000</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chu-duoi">
+    <h1 id="bcH1">Những điều tôi đã viết</h1>
+    <span class="nut-mo"><span id="bcNut">Chạm vào bưu thiếp để mở thư</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </span>
+  </div>
+
+  <!-- ===== BANNER CHỦ ĐỀ: mỗi chủ đề là một bưu thiếp ===== -->
+  <section class="banner" id="banner" aria-label="Chọn chủ đề">
+    <div class="banner-dai"><h2 id="bnTde">Gửi đến bạn</h2><p id="bnPhu">Chọn một chủ đề để mở những bức thư</p></div>
+    <div class="banner-luoi"><div class="luoi-trong" id="luoiTrong"></div></div>
+    <button class="quay" id="veBia" type="button">← Về bìa</button>
+  </section>
+
+  <!-- Bưu thiếp của chủ đề đang chọn -->
+  <div class="nho-loai" id="nhoLoai">
+    <div class="the" id="theLoai" role="button" tabindex="0" aria-label="Quay lại chọn chủ đề khác">
+      <div class="anh" id="anhLoai"><div class="loi"><span id="loaiTen"></span><small id="loaiPhu"></small></div></div>
+      <div class="tem"><span id="loaiTem"></span></div>
+    </div>
+  </div>
+
+  <!-- ===== THÁP THƯ CỦA CHỦ ĐỀ ===== -->
+  <section class="thap-khung" aria-label="Tháp thư">
+    <div class="thap-dau">
+      <button class="quay" id="veBanner" type="button">← Chọn chủ đề khác</button>
+      <h2 id="tdThap"></h2>
+      <p id="soThu"></p>
+    </div>
+    <div class="thap" id="thap"></div>
+  </section>
+</div>
+
+<!-- ===== HỘP ĐỌC THƯ ===== -->
+<div class="doc-hop" id="docHop" aria-hidden="true">
+  <article class="doc-giay" id="docGiay">
+    <button class="doc-dong" id="docDong" aria-label="Đóng thư">✕</button>
+    <h3 id="docTieude"></h3>
+    <div class="sub" id="docSub"></div>
+    <div id="docAnh"></div>
+    <div class="hang-nut"><button class="nut-hien" id="hienHet" type="button">Hiện hết chữ</button></div>
+    <div id="docNoidung"></div>
+  </article>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
